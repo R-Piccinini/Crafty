@@ -7,9 +7,9 @@
     font-weight: 400;
     font-style: normal;
     background-color: #5e7c50ab;
-    padding: 1%;
+    padding: 5%;
     height: 0%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 ol.breadcrumb {
@@ -77,7 +77,8 @@ strong {
 /*Colonne FAQs*/
 
 li {
-    text-decoration: none; 
+    text-decoration: none;
+    color: #2F3D14; 
 }
 
 .proviamo{
