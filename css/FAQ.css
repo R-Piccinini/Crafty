@@ -1,0 +1,96 @@
+/*Pagina FAQs*/
+
+/*Navbar movimento FAQs*/
+#navbarina {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #5e7c50ab;
+    padding: 1%;
+    height: 0%;
+    margin-bottom: 1%;
+}
+
+ol.breadcrumb {
+    margin-bottom: 0%;
+    color: #2F3D14;
+}
+
+#navPag {
+    color: #2F3D14;
+}
+
+#navPag:hover {
+    color: #DEDBD2;
+}
+
+/*Card FAQs*/
+#faqDomande,
+#faqColonne {
+    color: #2F3D14;
+    margin: 3%;
+}
+
+#cardFaq {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 3%;
+}
+
+.cartaSingola {
+    margin: 3%;
+    padding: 22px 15px 18px 21px;
+    border: 2pt solid var(--tertiary-blue, #2F3D14);
+    border-radius: 8px;
+    height: 128px;
+}
+
+.cartaSingola:hover {
+    background-color: #5e7c5068;
+}
+
+.card-title {
+    padding: 1%;
+    color: #2F3D14;
+}
+
+.card-link {
+    color: #2F3D14;
+    font-style: bold;
+}
+
+.card-link:hover {
+    color: white;
+}
+
+p {
+    color: #2F3D14;
+}
+
+strong {
+    color: #2F3D14;
+}
+
+/*Colonne FAQs*/
+
+.layout {
+    width: 1920px;
+    height: 1080px;
+
+    display: grid;
+    grid:
+        "img1 img2 img3 img4" 240px / 240px 240px 240px 240px;
+    gap: 8px;
+    grid-auto-flow: row dense;
+
+    justify-content: space-around;
+    justify-items: start;
+}
+
+li {
+    text-decoration: none; 
+}
+/*Sotto-Pagina FAQs*/
