@@ -76,21 +76,13 @@ strong {
 
 /*Colonne FAQs*/
 
-.layout {
-    width: 1920px;
-    height: 1080px;
-
-    display: grid;
-    grid:
-        "img1 img2 img3 img4" 240px / 240px 240px 240px 240px;
-    gap: 8px;
-    grid-auto-flow: row dense;
-
-    justify-content: space-around;
-    justify-items: start;
-}
-
 li {
     text-decoration: none; 
 }
+
+.proviamo{
+    justify-content: space-around;
+    justify-items: center;  
+}
+
 /*Sotto-Pagina FAQs*/
