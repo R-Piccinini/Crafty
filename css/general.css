@@ -69,9 +69,9 @@ body {
     align-content: center;
     justify-items: center;
     align-items: center;
-  }
+}
 
-  .custom_input {
+.custom_input {
 	display: flex;
 	align-items: center;
 	position: relative;

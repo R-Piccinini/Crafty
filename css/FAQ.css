@@ -7,9 +7,9 @@
     font-weight: 400;
     font-style: normal;
     background-color: #5e7c50ab;
-    padding: 1%;
+    padding: 5%;
     height: 0%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 ol.breadcrumb {
@@ -57,15 +57,6 @@ ol.breadcrumb {
     color: #2F3D14;
 }
 
-.card-link {
-    color: #2F3D14;
-    font-style: bold;
-}
-
-.card-link:hover {
-    color: white;
-}
-
 p {
     color: #2F3D14;
 }
@@ -77,12 +68,26 @@ strong {
 /*Colonne FAQs*/
 
 li {
-    text-decoration: none; 
+    color: #2F3D14; 
+    text-decoration:none;
 }
 
 .proviamo{
     justify-content: space-around;
     justify-items: center;  
+}
+
+.column-title{
+    color: #2F3D14 !important;
+}
+
+a{
+    color: #2F3D14;
+}
+
+a:hover{
+    color: #B68125;
+    font-weight: 600;
 }
 
 /*Sotto-Pagina FAQs*/
