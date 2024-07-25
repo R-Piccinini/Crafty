@@ -69,9 +69,9 @@ body {
     align-content: center;
     justify-items: center;
     align-items: center;
-  }
+}
 
-  .custom_input {
+.custom_input {
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -106,6 +106,10 @@ body {
 }
 
 footer{
+    color: #DEDBD2;
+}
+
+.titolofooter{
     color: #B68125;
     
 }
