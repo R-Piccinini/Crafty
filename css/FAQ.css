@@ -57,15 +57,6 @@ ol.breadcrumb {
     color: #2F3D14;
 }
 
-.card-link {
-    color: #2F3D14;
-    font-style: bold;
-}
-
-.card-link:hover {
-    color: white;
-}
-
 p {
     color: #2F3D14;
 }
@@ -77,8 +68,8 @@ strong {
 /*Colonne FAQs*/
 
 li {
-    text-decoration: none;
     color: #2F3D14; 
+    text-decoration:none;
 }
 
 .proviamo{
@@ -89,4 +80,14 @@ li {
 .column-title{
     color: #2F3D14 !important;
 }
+
+a{
+    color: #2F3D14;
+}
+
+a:hover{
+    color: #B68125;
+    font-weight: 600;
+}
+
 /*Sotto-Pagina FAQs*/
