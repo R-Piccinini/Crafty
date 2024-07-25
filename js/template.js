@@ -3,7 +3,7 @@ footer = document.getElementsByTagName('footer')[0]
 
 function loadTemplate() {
     header.innerHTML = `
-        <section class="layout ">
+        <section class="layout mt-4">
       <div><img class="w-50 h-auto" src="assets/img/icons/logocrafty.png" alt=""></div>
       <div class="w-100">
         <div class="custom_input w-auto">
@@ -23,7 +23,7 @@ function loadTemplate() {
       </div>
     </section>
 
-    <div class="row  justify-content-center mt-4 ">
+    <div class="row  justify-content-center my-4 ">
       <ul class="nav col-12  mb-2 justify-content-center mb-md-0">
         <a class="btn  btn-lg rounded-pill mx-4" href="#" role="button">
           categoria
