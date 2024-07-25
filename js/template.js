@@ -1,5 +1,5 @@
-header = document.getElementsByTagName("header")
-footer = document.getElementsByTagName("footer")
+header = document.getElementsByTagName('header')[0]
+footer = document.getElementsByTagName('footer')[0]
 
 function loadTemplate() {
     header.innerHTML = `
@@ -43,6 +43,8 @@ function loadTemplate() {
       </ul>
     </div>
     `
+    
+    
 
     footer.innerHTML = `
     <div class="row row-cols-4 pt-4">
