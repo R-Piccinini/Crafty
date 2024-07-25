@@ -7,9 +7,12 @@
     font-weight: 400;
     font-style: normal;
     background-color: #5e7c50ab;
-    padding: 5%;
-    height: 0%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    float: none;
+    color: #2F3D14 !important;
 }
 
 ol.breadcrumb {
@@ -18,11 +21,17 @@ ol.breadcrumb {
 }
 
 #navPag {
+    margin-left: 0%;
     color: #2F3D14;
 }
 
 #navPag:hover {
     color: #DEDBD2;
+}
+
+ol.breadcrumb {
+    margin-left: 2%;
+    color: #2F3D14;
 }
 
 /*Card FAQs*/
@@ -83,6 +92,7 @@ li {
 
 a{
     color: #2F3D14;
+    text-decoration:none;
 }
 
 a:hover{
@@ -90,4 +100,57 @@ a:hover{
     font-weight: 600;
 }
 
-/*Sotto-Pagina FAQs*/
+/*Sotto-Pagina 1Stato ordine FAQs*/
+
+#titoloPag{
+    color: #ba2644;
+    margin: 2%;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: #cdececa0;
+}
+
+#navbarina{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #cdececa0;
+    padding: 1%;
+    height: 0%;
+    margin-bottom :1%;
+}
+
+ol.breadcrumb{
+    margin-bottom: 0%;
+    color: #004c74;
+}
+
+#bottoneAccordo{
+    color: #004c74;
+}
+
+#bottoneAccordo:hover{
+    font-weight:500;
+    border: 1pt solid var(--tertiary-blue,#a8e2e2c4);
+}
+
+.accordion{
+    color: #004c74;
+    border-color: #49a9a644;
+    background-color: #cdececa0;
+    margin-bottom: 3%;
+}
+
+.accordion-body, .accordion-header{
+    color: #004c74;
+}
+
+#riquadroAssistenza{
+    margin-bottom: 3%;
+}
+#cardAssis{
+    margin: 3%;
+}
