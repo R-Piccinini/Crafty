@@ -6,7 +6,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: #5e7c50ab;
+    background-color: #5e7c5081;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -52,7 +52,7 @@ ol.breadcrumb {
 .cartaSingola {
     margin: 3%;
     padding: 22px 15px 18px 21px;
-    border: 2pt solid var(--tertiary-blue, #2F3D14);
+    border: 2pt solid var(#2F3D14, #2F3D14);
     border-radius: 8px;
     height: 128px;
 }
@@ -90,67 +90,63 @@ li {
     color: #2F3D14 !important;
 }
 
-a{
+.linkFAQ{
     color: #2F3D14;
     text-decoration:none;
 }
 
-a:hover{
+.linkFAQ:hover{
     color: #B68125;
     font-weight: 600;
 }
 
 /*Sotto-Pagina 1Stato ordine FAQs*/
 
-#titoloPag{
-    color: #ba2644;
+#titoloPag1{
+    color: #2F3D14;
     margin: 2%;
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--bs-accordion-active-color);
-    background-color: #cdececa0;
+    color: #2F3D14 var(--bs-accordion-active-color);
+    background-color: #5e7c5097;
 }
-
-#navbarina{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #cdececa0;
-    padding: 1%;
-    height: 0%;
-    margin-bottom :1%;
-}
-
-ol.breadcrumb{
-    margin-bottom: 0%;
-    color: #004c74;
+.accordion-button:not(.collapsed)::after {
+    color: #2F3D14;
 }
 
 #bottoneAccordo{
-    color: #004c74;
+    color: #2F3D14;
 }
 
 #bottoneAccordo:hover{
     font-weight:500;
-    border: 1pt solid var(--tertiary-blue,#a8e2e2c4);
+    border: 1pt solid var(#2F3D14);
 }
 
 .accordion{
-    color: #004c74;
-    border-color: #49a9a644;
-    background-color: #cdececa0;
+    color: #2F3D14;
+    border-color: #5e7c5097;
+    background-color: #DEDBD2;
     margin-bottom: 3%;
 }
 
 .accordion-body, .accordion-header{
-    color: #004c74;
+    color: #2F3D14;
 }
 
 #riquadroAssistenza{
     margin-bottom: 3%;
 }
+
 #cardAssis{
     margin: 3%;
+}
+
+.votazione{
+    background-color: #5A3A31;
+}
+
+.votazione:hover{
+    background-color: #2F3D14;
 }
