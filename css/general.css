@@ -3,6 +3,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #2F3D14
 }
 
 h1 {
@@ -38,10 +39,6 @@ h5 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-}
-
-body {
-    background-color: #2F3D14
 }
 
 .contenuto {
@@ -107,6 +104,7 @@ body {
 
 footer{
     color: #DEDBD2;
+
 }
 
 .titolofooter{

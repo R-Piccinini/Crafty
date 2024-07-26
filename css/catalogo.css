@@ -20,13 +20,25 @@
 	display: flex;
 	gap: 1%;
 	justify-content: center;
-	align-items: flex-start;
+	
   }
   
   .grow2 { flex-grow: 1; }
 
-h5{
+.stretched-link{
 	color: #5A3A31;
+}
+
+h6{
+	color: #5E7C50;
+}
+
+.card{
+	border-width: 0px;
+	background-color: #DEDBD2;
+}
+.card-body{
+	text-align: start;
 }
 
 .cr-wrapper *,
