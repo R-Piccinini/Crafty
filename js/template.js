@@ -23,7 +23,7 @@ function loadTemplate() {
       </div>
     </section>
 
-    <div class="row  justify-content-center my-4 ">
+    <div class="row  justify-content-center my-4">
       <ul class="nav col-12  mb-2 justify-content-center mb-md-0">
         <a class="btn  btn-lg rounded-pill mx-4" href="#" role="button">
           categoria
