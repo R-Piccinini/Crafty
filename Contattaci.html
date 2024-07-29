@@ -7,16 +7,18 @@
     <title>Contattaci - Crafty</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/general.css">
-
-    <link rel="stylesheet" href="css/Style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="popup/popup.css">
-        <style>
+    <style>
+        .contenuto {
+            color: #2F3D14;
+        }
+
         .contact-header {
-            background: url('your-contact-header-image.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 80px 0;
+
+            color: #2F3D14;
+            padding-top: 30px;
             text-align: center;
         }
 
@@ -27,9 +29,12 @@
 
         .contact-form {
             margin-top: 40px;
-            border: 2px solid #5E7C50;
+            border: 2px solid #5A3A31;
             padding: 30px;
             border-radius: 20px;
+        }
+        .btn-primary {
+            width: 100%;
         }
 
         .contact-info {
@@ -62,103 +67,127 @@
             height: 100%;
             border: 0;
             border-radius: 20px;
-            border: 4px solid #5E7C50;
+
 
         }
 
-        
+        .map-container {
+
+            border: 2px solid #5A3A31;
+            border-radius: 20px;
+
+        }
+
+        /* #Contattaci {
+            align-items: center;
+        } */
+        .contact-info a{
+            color: #2F3D14;
+        }
     </style>
 </head>
 
 <body onload="loadTemplate()">
+    <header>
 
-    
+    </header>
+
 
     <div class="contenuto">
         <!-- Contact Header Section -->
-    <div class="contact-header">
-        <div class="container">
-            <h1>Contattaci</h1>
-            <p class="lead">Siamo qui per aiutarti. Compila il modulo sottostante per metterti in contatto con noi.</p>
+        <div class="contact-header">
+            <div class="container">
+                <h1>Contattaci</h1>
+                <p class="lead">Siamo qui per aiutarti. Compila il modulo sottostante per metterti in contatto con noi.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="row" id="Contattaci">
-            <!-- Contact Form and Information -->
-            <div class="col-md-6">
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h2>Modulo di Contatto</h2>
-                    <form action="submit_form.php" method="post">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Nome</label>
-                                <input type="text" class="form-control" id="name" name="name" required />
+        <!-- Main Content -->
+        <div class="container ">
+            <div class="row" id="Contattaci">
+                <!-- Contact Form and Information -->
+                <div class="col-md-6">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2>Modulo di Contatto</h2>
+                        <form action="submit_form.php" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Nome</label>
+                                    <input type="text" class="form-control" id="name" name="name" required />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required />
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required />
+                            <div class="form-group">
+                                <label for="subject">Oggetto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required />
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Oggetto</label>
-                            <input type="text" class="form-control" id="subject" name="subject" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Messaggio</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Invia</button>
-                    </form>
+                            <div class="form-group">
+                                <label for="message">Messaggio</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Invia</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+
                 </div>
 
-                <!-- Contact Information -->
-
+                <!-- Map -->
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47515.16244171299!2d12.47245425!3d41.899359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1721831109001!5m2!1sit!2sit"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
-
-            <!-- Map -->
-            <div class="col-md-6">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47515.16244171299!2d12.47245425!3d41.899359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1721831109001!5m2!1sit!2sit"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="row">
+                <!-- Contact Form and Information -->
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h2>Informazioni di Contatto</h2>
+                        <p><i class="fas fa-map-marker-alt"></i> Indirizzo: Piazza del Colosseo 1, 00100 Roma, Italia
+                        </p>
+                        <p><i class="fas fa-phone"></i> Telefono: +39 012 3456789</p>
+                        <p><i class="fas fa-envelope"></i> Email: info@crafty.it</p>
+                        <p>
+                        <a href="facebook.com" target="_blank" ><i class="fa-brands fa-facebook fa-2x" ></i></a>
+                        <a href="https://www.twitter.com" target="_blank" ><i class="fa-brands fa-twitter social-icons fa-2x"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" ><i class="fa-brands fa-instagram social-icons fa-2x"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- Contact Form and Information -->
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-6">
-                <div class="contact-info">
-                    <h2>Informazioni di Contatto</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> Indirizzo: Via del Colosseo 123, 00100 Roma, Italia</p>
-                    <p><i class="fas fa-phone"></i> Telefono: +39 012 3456789</p>
-                    <p><i class="fas fa-envelope"></i> Email: info@crafty.it</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-            </div>
-        </div>
-    </div>
 
-   
+
 
     </div>
-    <!-- Footer -->
-    <script src="js/template.js"></script>
+    <footer>
+
+    </footer>
+
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/template.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-        <script src="popup/popup.js"></script>
+    <script src="popup/popup.js"></script>
 
-        
+
     <script>
-       
+
     </script>
 </body>
 
