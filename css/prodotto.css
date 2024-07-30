@@ -1,0 +1,25 @@
+#btnCart {
+    background-color: #5E7C50;
+}
+
+#btnCart:hover {
+    background-color: #B68125;
+}
+.accordion-header{
+    background-color: #DEDBD2;
+}
+.accordion-button{
+    background-color: #DEDBD2;
+}
+
+.accordion-body{
+    background-color:#DEDBD2;
+}
+
+.accordion-button:hover{
+    background-color: #B68125;
+}
+
+.accordion-button:active{
+    background-color: #B68125;
+}
