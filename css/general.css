@@ -54,7 +54,18 @@ border: none;
     border-radius: 5px;
     font-size: 1em;
 }
-
+.password-dimenticata {
+   
+   
+    justify-content: center;
+    display: flex;
+    margin: 15px auto;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
 .select-accesso {
     appearance: none;
     -webkit-appearance: none;
