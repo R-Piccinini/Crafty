@@ -17,8 +17,8 @@ function loadTemplate() {
           </div>
         </div>
         <div class="text-end">
-          <i class="fa-solid fa-user fa-2xl" style="color: #b68125;"></i>
-        </div>
+    <i class="fa-solid fa-user fa-2xl" style="color: #b68125;" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+</div>
         <div class="text-end">
           <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #b68125" ;></i>
         </div>
@@ -75,6 +75,65 @@ function loadTemplate() {
         </div>
       </div>
     </div>
+
+
+     <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="">  
+                            <div class="main-accesso">  
+                                <input class="input-accesso"  type="checkbox" id="chk" aria-hidden="true">
+                                
+                                <div class="signup">
+                                    <form>
+                                        <label class="label-accesso" for="chk" aria-hidden="true">Registrati</label>
+                                        <select class="select-accesso" name="tipo_utente" id="tipo_utente" required="">
+                                            <option value="" disabled selected>Seleziona tipo di utente</option>
+                                            <option value="utente">Utente</option>
+                                            <option value="azienda">Azienda</option>
+                                        </select>
+                                        <div id="utente-fields" class="hidden">
+                                            <input class="input-accesso"  type="text" name="nome" placeholder="Nome" required="">
+                                            <input class="input-accesso"  type="text" name="cognome" placeholder="Cognome" required="">
+                                            <input class="input-accesso"  type="email" name="email" placeholder="Email" required="">
+                                            <input class="input-accesso"  type="email" name="confirm_email" placeholder="Conferma Email" required="">
+                                            <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
+                                            <input class="input-accesso"  type="password" name="confirm_pswd" placeholder="Conferma Password" required="">
+                                        </div>
+                                        <div id="azienda-fields" class="hidden">
+                                            <input class="input-accesso"  type="text" name="nome_azienda" placeholder="Nome Azienda" required="">
+                                            <input class="input-accesso"  type="text" name="partita_iva" placeholder="Partita IVA" required="">
+                                            <input class="input-accesso"  type="email" name="email" placeholder="Email" required="">
+                                            <input class="input-accesso"  type="email" name="confirm_email" placeholder="Conferma Email" required="">
+                                            <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
+                                            <input class="input-accesso"  type="password" name="confirm_pswd" placeholder="Conferma Password" required="">
+                                        </div>
+                                        <button class="tasto-accesso">Registrati</button>
+                                    </form>
+                                </div>
+                                
+                                <div class="login">
+                                    <form>
+                                        <label class="label-accesso" for="chk" aria-hidden="true">Accedi</label>
+                                        <input class="input-accesso" type="email" name="email" placeholder="Email" required="">
+                                        <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
+                                        <select class="select-accesso"  name="tipo_accesso" required="">
+                                            <option value="" disabled selected>Seleziona tipo di accesso</option>
+                                            <option value="utente">Utente</option>
+                                            <option value="azienda">Azienda</option>
+                                            <option value="amministratore">Amministratore</option>
+                                        </select>
+                                        <button class="tasto-accesso">Accedi</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     `
 
 
@@ -127,4 +186,18 @@ function loadTemplate() {
         </ul>
       </div>
       `
+      document.getElementById('tipo_utente').addEventListener('change', function() {
+        const utenteFields = document.getElementById('utente-fields');
+        const aziendaFields = document.getElementById('azienda-fields');
+        if (this.value === 'utente') {
+            utenteFields.classList.remove('hidden');
+            aziendaFields.classList.add('hidden');
+        } else if (this.value === 'azienda') {
+            aziendaFields.classList.remove('hidden');
+            utenteFields.classList.add('hidden');
+        } else {
+            utenteFields.classList.add('hidden');
+            aziendaFields.classList.add('hidden');
+        }
+    });
 }

@@ -19,7 +19,7 @@ document.body.insertAdjacentHTML('beforeend', `
     </div>
     
     <!-- Bottone della Chat -->
-    <button id="open-chat" class="btn">
+    <button id="open-chat" class="btn-popup">
         <i class="fas fa-comments"></i>
     </button>
     `);
@@ -54,4 +54,6 @@ document.body.insertAdjacentHTML('beforeend', `
             }, 300); // Il timeout dovrebbe corrispondere alla durata della transizione CSS
         }
     });
+
+    
     
