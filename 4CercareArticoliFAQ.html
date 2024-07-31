@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
 </head>
 
-<body onload="loadTemplate()">
+<body onload="loadTemplate()" class="overflow-x-hidden">
     <!--HEADER-->
-    <header>
+    <header class="my-4">
 
     </header>
 
@@ -44,23 +44,16 @@
                     <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
                         data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseOne">
-                        Cosa cercare durante la ricerca
+                        <p>Come effettuare una ricerca per articoli</p>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" >
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        Ci sono tantissimi articoli e negozi da poter scegliere su Crafty, e desideriamo assicurarci che
-                        tu riesca a trovare esattamente quello che stai cercando. Qui di seguito puoi trovare alcuni
-                        suggerimenti per riuscire a trovare l'articolo perfetto per te!
-                        Gli articoli sono classificati in categorie e quelle più vendute con appositi filti legati
-                        all'utente.<br>
-                        È possibile vedere le recensioni sulla pagina Home del negozio oppure sulla pagina
-                        dell'inserzione al momento di visualizzare un articolo. Le recensioni del negozio sono feedback
-                        espressi dagli acquirenti che in precedenza hanno effettuato acquisti da tale negozio. Alcuni
-                        acquirenti includono delle foto alle loro recensioni , che insieme alle foto dell'inserzione ti
-                        offrono un'idea di come è fatto l'oggetto. Il punteggio espresso con le stelle, che vedi
-                        riferito a un venditore, rappresenta la media delle recensioni da questi ricevute da parte degli
-                        acquirenti negli ultimi 12 mesi.
+                        <p> I risultati di ricerca vengono ordinati in base alla pertinenza che gli articoli hanno
+                            rispetto
+                            ai termini della tua ricerca. È possibile modificare l'ordine l'opzione Ordina per che si
+                            trova
+                            sopra ai risultati di ricerca.</p>
                     </div>
                 </div>
             </div>
@@ -69,98 +62,54 @@
                     <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
                         data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTwo">
-                        I diversi stati della spedizione:
+                        <p> Come applicare i filtri ai risultati di ricerca:</p>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body">
+                        <p> Accanto tutti gli articoli, filtra i tuoi risultati in base al tempo di arrivo, Spedizione
+                            gratuita, o Prezzo. Scegli Tutti i filtri, per visualizzare un elenco completo di modi in
+                            cui puoi restringere i risultati, ad esempio:</p>
                         <ul class="wt-list-unstyled wt-line-height-tight wt-text-body-01">
-                            <li class="wt-mb-xs-1 linkpagineFAQ"><strong>Spedito</strong> significa che il venditore ha
-                                completato l'ordine su <strong>Crafty</strong> e che l'ordine è in viaggio.</li>
-                            <li class="wt-mb-xs-1 linkpagineFAQ"> <strong>Pre-transito</strong>: il venditore ha
-                                aggiunto un codice di tracciamento ed è in attesa di scansione presso la struttura di
-                                spedizione.</li>
-                            <li class="wt-mb-xs-1 linkpagineFAQ"><strong>In transito</strong>: il venditore ha spedito
-                                il tuo ordine che è attualmente in viaggio per raggiungere la tua destinazione.</li>
-                            <li class="wt-mb-xs-1 linkpagineFAQ"><strong>Consegnato</strong>: il pacco è arrivato e ora
-                                puoi lasciare una recensione per il tuo ordine.</li>
+                            <li class="wt-mb-xs-1 linkpagineFAQ">Offerte speciali, come articoli in offerta</li>
+                            <li class="wt-mb-xs-1 linkpagineFAQ">Categorie, come Casa e arredi o Arte e oggetti da
+                                collezione</li>
+                            <li class="wt-mb-xs-1 linkpagineFAQ">Spedizione, come spedizione gratuita</li>
+                            <li class="wt-mb-xs-1 linkpagineFAQ">Colore</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree">
-                        Come tracciare un pacco
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Nell'area del profilo, seleziona Cerca spedizioni per vedere informazioni dettagliate sullo
-                        stato del pacchetto.<br>
-                        Potrai vedere le informazioni di spedizione anche nell'email di notifica della spedizione
-                        relativa al tuo ordine. Seleziona Cerca spedizioni nell'email di notifica per visualizzare lo
-                        stato della tua consegna.
-                    </div>
+
+            <div class="article-votes text-center my-4">
+                <span class="article-votes-question" style="color: #2F3D14;">Questo ha risolto il problema?</span>
+                <div class="article-votes-controls">
+                    <a href="FAQ.html" class="btn px-4 py-1 votazione">Sì</a>
+                    <a href="Contattaci.html" class="btn px-4 py-1 votazione">No</a>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" id="bottoneAccordo" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true"
-                        aria-controls="panelsStayOpen-collapseFour">
-                        Cosa fare se il tuo ordine non arriva
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse ">
-                    <div class="accordion-body">
-                        Se il tuo ordine non arriva ed è considerato idoneo, riceverai un rimborso completo come parte
-                        del Programma di Protezione degli acquisti di Crafty.<br><br>
-                        Ti consigliamo, controllare i seguenti punti prima di contattarci.<br>
-                        <ul class="wt-list-unstyled wt-line-height-tight wt-text-body-01">
-                            <li class="wt-mb-xs-1 linkpagineFAQ">Controlla se qualcun altro, in casa tua o in ufficio,
-                                ha accettato il pacchetto.</li>
-                            <li class="wt-mb-xs-1 linkpagineFAQ">Se l'articolo che hai acquistato non è urgente, prova
-                                ad aspettare un altro giorno. A volte il corriere ha bisogno di un po' di tempo extra
-                                per la consegna del pacchetto.</li>
-                            <li class="wt-mb-xs-1 linkpagineFAQ">Contatta l'ufficio postale della tua zona o il centro
-                                di spedizione per controllare che il pacchetto non sia lì.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="article-votes wt-text-center-xs wt-mt-xs-8 wt-mb-xs-7">
-            <span class="article-votes-question">Questo ha risolto il problema?</span>
-            <div class="article-votes-controls" role="radiogroup" data-article-id="4409221032599">
-                <a class="vote-button article-vote article-vote-up js-article-vote-up" aria-selected="false" role="radio" rel="nofollow" title="Sì" href="https://help.etsy.com/hc/it/articles/4409221032599-Come-trovare-i-migliori-articoli-su-Etsy?segment=shopping#"></a>
-                <a class="vote-button article-vote article-vote-down js-article-vote-down" aria-selected="false" role="radio" rel="nofollow" title="No" href="https://help.etsy.com/hc/it/articles/4409221032599-Come-trovare-i-migliori-articoli-su-Etsy?segment=shopping#"></a>
-            </div>
-        </div>
-
-        <!--FAQ-SERVIZIO CLIENTI-->
-        <div class="container-fluid" id="riquadroAssistenza">
-            <div class="p-5 rounded " style="background-color :#5e7c5081; ">
-                <div class="row " id="cardAssis">
-                    <div class="col-12 col-sm-6 ">
-                        <strong>
-                            <h7 style="color: #5A3A31;">CONTATTACI</h7>
-                        </strong>
-                        <h4 style="color: #2F3D14;">Hai bisogno di assistenza?
-                        </h4>
-                        <button class="btn btn-primary" type="button" href="Contattaci.html">Inviaci un messaggio</button>
-                    </div>
-                    <div class="col-12 col-sm-4 ms-auto">
-                        <div class="card ">
-                            <div class="card-body rounded float-end" style="background-color: #2F3D14;">
-                                <h4 class="card-subtitle mb-2" style="color: #DEDBD2;">Tel 09.9999999</h4>
-                                <p class="card-text" style="color: #DEDBD2;">Siamo a tua disposizione da lunedì al
-                                    venerdì dalle 8.30 alle 20 e il sabato e la domenica
-                                    dalle 9.00 alle 18.00 (festivi esclusi), al costo di una chiamata nazionale.</p>
+            <!--FAQ-SERVIZIO CLIENTI-->
+            <div class="container-fluid" id="riquadroAssistenza">
+                <div class="p-5 rounded " style="background-color :#5e7c5081; ">
+                    <div class="row " id="cardAssis">
+                        <div class="col-12 col-sm-6 ">
+                            <strong>
+                                <h7 style="color: #5A3A31;">CONTATTACI</h7>
+                            </strong>
+                            <h4 style="color: #2F3D14;">Hai bisogno di assistenza?
+                            </h4>
+                            <button class="btn btn-primary" type="button" href="Contattaci.html">Inviaci un
+                                messaggio</button>
+                        </div>
+                        <div class="col-12 col-sm-4 ms-auto">
+                            <div class="card ">
+                                <div class="card-body rounded float-end" style="background-color: #2F3D14;">
+                                    <h4 class="card-subtitle mb-2" style="color: #DEDBD2;">Tel 09.9999999</h4>
+                                    <p class="card-text" style="color: #DEDBD2;">Siamo a tua disposizione da lunedì al
+                                        venerdì dalle 8.30 alle 20 e il sabato e la domenica
+                                        dalle 9.00 alle 18.00 (festivi esclusi), al costo di una chiamata nazionale.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,7 +117,6 @@
             </div>
         </div>
     </div>
-
     <!--FOOTER-->
     <footer>
     </footer>
