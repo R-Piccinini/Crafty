@@ -23,3 +23,25 @@
 .accordion-button:active{
     background-color: #B68125;
 }
+
+
+.layoutProd {
+    width: 100%;
+  
+    display: flex;
+    gap: 16px;
+
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .grow1Prod { flex-grow: 1; }
+
+  .porcopadding {
+    padding-left: 1px;
+  }
+
+  .recensione{
+    background-color: #DEDBD2;
+    border-color: #DEDBD2;
+  }

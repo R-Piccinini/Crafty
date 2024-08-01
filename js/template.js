@@ -26,7 +26,7 @@ function loadTemplate() {
 
       <div class="container">
         <div class="row  justify-content-center mt-4 ">
-          <ul class="nav col-12  mb-2 justify-content-center mb-md-0">
+          <ul class="nav col-12  mb-2 justify-content-center mb-md-0 d-flex flex-nowrap">
             <a class="btn btn-lg rounded-pill ms-3" href="#" role="button">
               categoria
             </a>

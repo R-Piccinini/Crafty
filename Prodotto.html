@@ -2,113 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="popup/popup.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/prodotto.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="popup/popup.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/prodotto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
 </head>
 
-<body class="overflow-x-hidden" onload="loadTemplate()">
-    <header class="my-4">
+<body class="overflow-x-hidden" onload="loadTemplate(),loadProd(id),loadReviews(id)">
+  <header class="my-4">
 
-    </header>
+  </header>
 
-    <div class="contenuto">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-1">
-                    <img class="img-fluid m-2" src="https://placehold.co/400x400/orange/white" alt="">
-                    <img class="img-fluid m-2" src="https://placehold.co/400x400/red/white" alt="">
-                    <img class="img-fluid m-2" src="https://placehold.co/400x400/blue/white" alt="">
-                    <img class="img-fluid m-2" src="https://placehold.co/400x400/green/white" alt="">
-                    <img class="img-fluid m-2" src="https://placehold.co/400x400/pink/white" alt="">
-                </div>
-                <div class=" col-9 col-md-6 m-2">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://placehold.co/1600x1600/orange/white" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://placehold.co/400x400/green/white" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://placehold.co/400x400/purple/white" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 m-2">
-                  <h3>Nome oggetto</h3>
-                  <h4>99,99€</h4>
-                  <button type="button" class="btn w-100 rounded-pill my-3" id="btnCart"><strong>Aggiungi al Carrello</strong></button>
-                  <div class="accordion accordion-flush w-100" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                          <strong>Dettagli prodotto</strong>
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed  rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            <strong>Condizioni di vendità</strong>
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                            <strong>Prodotto da...</strong>
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <div class="col-12">9999 Recensioni</div>
-              <div class=" col-12 col-md-8"><ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
-              </ul></div>  
-            </div>
+  <div class="contenuto">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-1">
+          <img class="img-fluid m-2" src="https://placehold.co/400x400/orange/white" alt="">
+          <img class="img-fluid m-2" src="https://placehold.co/400x400/red/white" alt="">
+          <img class="img-fluid m-2" src="https://placehold.co/400x400/blue/white" alt="">
+          <img class="img-fluid m-2" src="https://placehold.co/400x400/green/white" alt="">
+          <img class="img-fluid m-2" src="https://placehold.co/400x400/pink/white" alt="">
         </div>
+        <div class=" col-9 col-md-6 m-2">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://placehold.co/1600x1600/orange/white" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/400x400/green/white" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/400x400/purple/white" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 m-2">
+          <h3 id="name">Nome oggetto</h3>
+          <h4 id="rating"></h4>
+          <h4 id="price">99,99€</h4>
+          <button type="button" class="btn w-100 rounded-pill my-3" id="btnCart"><strong>Aggiungi al
+              Carrello</strong></button>
+          <div class="accordion accordion-flush w-100" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item my-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-pill" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  <strong>Dettagli prodotto</strong>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body" id="description">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed  rounded-pill" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  <strong>Condizioni di vendita</strong>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <section class="layoutProd">
+                    <div><i class="fa-solid fa-truck fa-xl"></i></div>
+                    <div class="grow1Prod">Spedizione <strong>gratuita</strong></div>
+                  </section>
+                  <br>
+                  <section class="layoutProd">
+                    <div><i class="fa-solid fa-box fa-xl p-1"></i></div>
+                    <div class="grow1Prod porcopadding">Si accettano resi e cambi <strong>entro 30 giorni</strong> </div>
+                  </section>
+                  <br>
+                  <section class="layoutProd">
+                    <div><i class="fa-solid fa-calendar fa-xl p-1 "></i></div>
+                    <div class="grow1Prod porcopadding" id="shipping">ssssssssssssssss</div>
+                  </section>
+                  <br>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed rounded-pill" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  <strong>Prodotto da...</strong>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each element. These classes control the
+                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
+                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12" id="reviews">9999 Recensioni</div>
+        <div class=" col-12 col-md-8">
+          <ul class="list-group list-group-flush text-break" id="reviewList">
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
 
-    <footer>
+  <footer>
 
-    </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/4bea790e60.js" crossorigin="anonymous"></script>
-    <script src="popup/popup.js"></script>
-    <script src="js/template.js"></script>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/4bea790e60.js" crossorigin="anonymous"></script>
+  <script src="popup/popup.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/prodotto.js"></script>
 </body>
 
 </html>
