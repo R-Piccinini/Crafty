@@ -89,12 +89,12 @@ function loadTemplate() {
                                 <div class="signup">
                                     <form>
                                         <label class="label-accesso" for="chk" aria-hidden="true">Registrati</label>
-                                        <select class="select-accesso" name="tipo_utente" id="tipo_utente" required="">
+                                       <!-- <select class="select-accesso" name="tipo_utente" id="tipo_utente" required="">
                                             <option value="" disabled selected>Seleziona tipo di utente</option>
                                             <option value="utente">Utente</option>
                                             <option value="azienda">Azienda</option>
-                                        </select>
-                                        <div id="utente-fields" class="hidden">
+                                        </select>-->
+                                        <div id="utente-fields" class="">
                                             <input class="input-accesso"  type="text" name="nome" placeholder="Nome" required="">
                                             <input class="input-accesso"  type="text" name="cognome" placeholder="Cognome" required="">
                                             <input class="input-accesso"  type="email" name="email" placeholder="Email" required="">
@@ -102,14 +102,14 @@ function loadTemplate() {
                                             <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
                                             <input class="input-accesso"  type="password" name="confirm_pswd" placeholder="Conferma Password" required="">
                                         </div>
-                                        <div id="azienda-fields" class="hidden">
+                                       <!-- <div id="azienda-fields" class="hidden">
                                             <input class="input-accesso"  type="text" name="nome_azienda" placeholder="Nome Azienda" required="">
                                             <input class="input-accesso"  type="text" name="partita_iva" placeholder="Partita IVA" required="">
                                             <input class="input-accesso"  type="email" name="email" placeholder="Email" required="">
                                             <input class="input-accesso"  type="email" name="confirm_email" placeholder="Conferma Email" required="">
                                             <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
                                             <input class="input-accesso"  type="password" name="confirm_pswd" placeholder="Conferma Password" required="">
-                                        </div>
+                                        </div>-->
                                         <button class="tasto-accesso">Registrati</button>
                                     </form>
                                 </div>
@@ -117,15 +117,17 @@ function loadTemplate() {
                                 <div class="login">
                                     <form>
                                         <label class="label-accesso" for="chk" aria-hidden="true">Accedi</label>
-                                        <input class="input-accesso" type="email" name="email" placeholder="Email" required="">
-                                        <input class="input-accesso"  type="password" name="pswd" placeholder="Password" required="">
-                                        <select class="select-accesso"  name="tipo_accesso" required="">
+                                        <input class="input-accesso" id="username" type="email" name="email" placeholder="Email" required="">
+                                        <input class="input-accesso" id="password" type="password" name="pswd" placeholder="Password" required="">
+                                        <a class="password-dimenticata" href="#">Password dimenticata</a>
+                                        <!--<select class="select-accesso"  name="tipo_accesso" required="">
                                             <option value="" disabled selected>Seleziona tipo di accesso</option>
                                             <option value="utente">Utente</option>
                                             <option value="azienda">Azienda</option>
                                             <option value="amministratore">Amministratore</option>
-                                        </select>
+                                        </select>-->
                                         <button class="tasto-accesso">Accedi</button>
+                                        <p id="message"></p>
                                     </form>
                                 </div>
                             </div>
@@ -186,18 +188,78 @@ function loadTemplate() {
         </ul>
       </div>
       `
-      document.getElementById('tipo_utente').addEventListener('change', function() {
-        const utenteFields = document.getElementById('utente-fields');
-        const aziendaFields = document.getElementById('azienda-fields');
-        if (this.value === 'utente') {
-            utenteFields.classList.remove('hidden');
-            aziendaFields.classList.add('hidden');
-        } else if (this.value === 'azienda') {
-            aziendaFields.classList.remove('hidden');
-            utenteFields.classList.add('hidden');
-        } else {
-            utenteFields.classList.add('hidden');
-            aziendaFields.classList.add('hidden');
-        }
-    });
+    //   document.getElementById('tipo_utente').addEventListener('change', function() {
+    //     const utenteFields = document.getElementById('utente-fields');
+    //     const aziendaFields = document.getElementById('azienda-fields');
+    //     if (this.value === 'utente') {
+    //         utenteFields.classList.remove('hidden');
+    //         aziendaFields.classList.add('hidden');
+    //     } else if (this.value === 'azienda') {
+    //         aziendaFields.classList.remove('hidden');
+    //         utenteFields.classList.add('hidden');
+    //     } else {
+    //         utenteFields.classList.add('hidden');
+    //         aziendaFields.classList.add('hidden');
+    //     }
+    // });
+}async function login(event) {
+  event.preventDefault();
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const messageElement = document.getElementById('message');
+
+  try {
+      console.log("OK");
+      const response = await fetch('http://localhost:8080/auth/login', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+      });
+
+      if (response.status === 200) {
+          const data = await response.json();
+          const token = data.token;
+          localStorage.setItem('authToken', token);
+          messageElement.textContent = 'Login successful';
+          messageElement.style.color = 'green';
+          //TODO: redirect sul profilo utente
+      } else {
+          messageElement.textContent = 'Invalid credentials';
+          messageElement.style.color = 'red';
+      }
+  } catch (error) {
+      console.error('Error during login:', error);
+      messageElement.textContent = 'Error during login';
+      messageElement.style.color = 'red';
+  }
+}
+
+async function logout(event) {
+  event.preventDefault();
+  const token = localStorage.getItem('authToken');
+  const messageElement = document.getElementById('message');
+
+  try {
+      const response = await fetch('http://localhost:8080/auth/logout', {
+          method: 'POST',
+          headers: {
+              'Authorization': `${token}`
+          }
+      });
+
+      if (response.status === 200) {
+          localStorage.removeItem('authToken');
+          messageElement.textContent = 'Logout successful';
+          messageElement.style.color = 'green';
+      } else {
+          messageElement.textContent = 'Error during logout';
+          messageElement.style.color = 'red';
+      }
+  } catch (error) {
+      console.error('Error during logout:', error);
+      messageElement.textContent = 'Error during logout';
+      messageElement.style.color = 'red';
+  }
 }
