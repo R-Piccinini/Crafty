@@ -9,6 +9,14 @@ const description = document.getElementById('description')
 const reviewList = document.getElementById('reviewList')
 const rating = document.getElementById('rating')
 const shipping = document.getElementById('shipping')
+const img1 = document.getElementById('img1')
+const img2 = document.getElementById('img2')
+const img3 = document.getElementById('img3')
+const img4 = document.getElementById('img4')
+const imgc1 = document.getElementById('imgc1')
+const imgc2 = document.getElementById('imgc2')
+const imgc3 = document.getElementById('imgc3')
+const imgc4 = document.getElementById('imgc4')
 const date = new Date();
 let day = date.getDate()
 const months = ["gen", "feb", "mar", "apri", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"];
@@ -28,6 +36,17 @@ function loadProd(id) {
             price.innerHTML = `${prod.prezzo}€`
             description.innerHTML = prod.descrizione + `<br><br><strong> Categoria : </strong>` + prod.category.nome
             shipping.innerHTML = `Ordina oggi per riceverlo entro il giorno <strong>${day + 2}-${day + 7}  ${month} </strong>`
+            const imgString = prod.img
+            imgArray = imgString.split(",")
+            console.log(imgArray)
+            img1.src = `assets\\img\\products\\${imgArray[0]}`
+            imgc1.src = `assets\\img\\products\\${imgArray[0]}`
+            img2.src = `assets\\img\\products\\${imgArray[1].trim()}`
+            imgc2.src = `assets\\img\\products\\${imgArray[1].trim()}`
+            img3.src = `assets\\img\\products\\${imgArray[2].trim()}`
+            imgc3.src = `assets\\img\\products\\${imgArray[2].trim()}`
+            img4.src = `assets\\img\\products\\${imgArray[3].trim()}`
+            imgc4.src = `assets\\img\\products\\${imgArray[3].trim()}`
         })
 }
 
@@ -51,14 +70,14 @@ function loadReviews(id) {
                         li.appendChild(star2)
                     }
                     const descrizione = document.createElement('p')
-                    descrizione.classList="h6"
+                    descrizione.classList = "h6"
                     descrizione.innerHTML = review.descrizione
                     li.appendChild(descrizione)
-                    
 
-                    const utente=document.createElement('p')
-                    utente.innerHTML= review.user.nome+` `+review.user.cognome
-                    utente.classList="text-end"
+
+                    const utente = document.createElement('p')
+                    utente.innerHTML = review.user.nome + ` ` + review.user.cognome
+                    utente.classList = "text-end"
                     li.appendChild(utente)
                     reviewList.appendChild(li)
                 }
@@ -75,3 +94,70 @@ function loadReviews(id) {
 
         })
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: false, // Stops the autoplay
+        ride: false // Ensures the carousel does not automatically cycle
+    });
+
+    // Function to change the carousel slidehttps://placehold.co/1600x1600/orange/white
+    function changeSlide(index) {
+        var bootstrapCarousel = bootstrap.Carousel.getInstance(myCarousel);
+        bootstrapCarousel.to(index);
+    }
+
+    // Add event listeners to the images
+    document.querySelector('#img1').addEventListener('click', function () {
+        changeSlide(0);
+    });
+
+    document.querySelector('#img2').addEventListener('click', function () {
+        changeSlide(1);
+    });
+
+    document.querySelector('#img3').addEventListener('click', function () {
+        changeSlide(2);
+    });
+
+    document.querySelector('#img4').addEventListener('click', function () {
+        changeSlide(3);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var carouselInner = document.querySelector('.carousel-inner');
+    var isDragging = false;
+    var startX;
+    var scrollLeft; https://placehold.co/1600x1600/orange/white
+
+    function startDragging(e) {
+        isDragging = true;
+        startX = e.pageX || e.touches[0].pageX - carouselInner.offsetLeft; // For touch devices
+        scrollLeft = carouselInner.scrollLeft;
+    }
+
+    function stopDragging() {
+        isDragging = false;
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX - carouselInner.offsetLeft; // For touch devices
+        const walk = (x - startX) * 3; // scroll-fast
+        carouselInner.scrollLeft = scrollLeft - walk;
+    }
+
+    carouselInner.addEventListener('mousedown', startDragging);
+    carouselInner.addEventListener('mouseleave', stopDragging);
+    carouselInner.addEventListener('mouseup', stopDragging);
+    carouselInner.addEventListener('mousemove', drag);
+
+    // Touch events
+    carouselInner.addEventListener('touchstart', startDragging);
+    carouselInner.addEventListener('touchend', stopDragging);
+    carouselInner.addEventListener('touchmove', drag);
+});
+
