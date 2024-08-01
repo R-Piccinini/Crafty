@@ -7,5 +7,61 @@
     background:none;
 }
 
+.contenutoBello{
+    background-color: #DEDBD2;
+}
 
+.MosaicoContainer{
+    background-color: #5E7C50;
+}
+
+.card{
+    background-color: #DEDBD2;  
+}
+
+.titolo{
+    color: #2F3D14 ;
+}
+
+a.btn{
+    color: #DEDBD2;
+}
+
+.carteProdotto{
+    background-color: #DEDBD2;
+    color: #2F3D14;
+    border: none;
+}
+
+.linkTesto{
+    color: #2F3D14 !important;
+}
+
+.fw-bolder{
+    color: #2F3D14;
+}
+
+.linkTesto:hover{
+    color: #5E7C50;
+}
+
+.prezzoScontato{
+    color: #5E7C50;
+}
+
+.saldi{
+    background-color: #2F3D14;
+}
+
+.prodNuovo{
+    background-color: #5E7C50;
+}
+
+.btn{
+    background-color: #2F3D14;
+}
+
+h3{
+color: #2F3D14;
+}
 
