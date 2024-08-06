@@ -29,7 +29,6 @@ a.btn{
 
 .carteProdotto{
     background-color: #DEDBD2;
-    color: #2F3D14;
     border: none;
 }
 
@@ -55,6 +54,7 @@ a.btn{
 
 .prodNuovo{
     background-color: #5E7C50;
+    color: #DEDBD2;
 }
 
 .btn{
