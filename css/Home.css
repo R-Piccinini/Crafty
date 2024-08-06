@@ -162,3 +162,6 @@ h3 {
 .cardRecensioni {
     background-color: rgba(255, 255, 255, 0.543);
 }
+a{
+    text-decoration: none;
+}
