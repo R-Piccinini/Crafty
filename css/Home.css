@@ -1,4 +1,4 @@
-<!--CAROSELLO-->
+/* <!--CAROSELLO-->
 .freccia{
     background:none;
 }
@@ -6,6 +6,173 @@
 .freccia:hover {
     background:none;
 }
+
+.contenutoBello{
+    background-color: #DEDBD2;
+}
+
+.MosaicoContainer{
+    background-color: #5E7C50;
+}
+
+.card{
+    background-color: #DEDBD2;  
+}
+
+.titolo{
+    color: #2F3D14 ;
+}
+
+a.btn{
+    color: #DEDBD2;
+}
+
+.carteProdotto{
+    background-color: #DEDBD2;
+    border: none;
+}
+
+.linkTesto{
+    color: #2F3D14 !important;
+}
+
+.fw-bolder{
+    color: #2F3D14;
+}
+
+.linkTesto:hover{
+    color: #5E7C50;
+}
+
+.prezzoScontato{
+    color: #5E7C50;
+}
+
+.saldi{
+    background-color: #2F3D14;
+}
+
+.prodNuovo{
+    background-color: #5E7C50;
+    color: #DEDBD2;
+}
+
+.btn{
+    background-color: #2F3D14;
+}
+
+h3{
+color: #2F3D14;
+}
+
+#imgCaroesello1{
+    height: 90%;
+}
+
+.cardRecensioni{
+    background-color: rgba(255, 255, 255, 0.543);
+} */
+ .freccia {
+    background: none;
+}
+
+.freccia:hover {
+    background: none;
+}
+
+.contenutoBello {
+    background-color: #DEDBD2;
+}
+
+.MosaicoContainer {
+    background-color: #5E7C50;
+}
+
+.card {
+    background-color: #DEDBD2;  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.card .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Specifica l'altezza desiderata */
+    width: 100%;
+}
+
+.titolo {
+    color: #2F3D14 ;
+}
+
+a.btn {
+    color: #DEDBD2;
+}
+
+.carteProdotto {
+    background-color: #DEDBD2;
+    color: #2F3D14;
+    border: none;
+}
+
+.linkTesto {
+    color: #2F3D14 !important;
+}
+
+.fw-bolder {
+    color: #2F3D14;
+}
+
+.linkTesto:hover {
+    color: #5E7C50;
+}
+
+.prezzoScontato {
+    color: #5E7C50;
+}
+
+.saldi {
+    background-color: #2F3D14;
+}
+
+.prodNuovo {
+    background-color: #5E7C50;
+}
+
+.btn {
+    background-color: #2F3D14;
+}
+
+h3 {
+    color: #2F3D14;
+}
+
+#imgCaroesello1 {
+    height: 90%;
+}
+
+.cardRecensioni {
+    background-color: rgba(255, 255, 255, 0.543);
+}
+a{
+    text-decoration: none;
+}
+
+#last-reviews{
+    min-height: 500px;
+}
+
+
+
+
 
 
 
